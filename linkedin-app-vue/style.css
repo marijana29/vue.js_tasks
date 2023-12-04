@@ -1,0 +1,95 @@
+body {
+  font-family: monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f8f8;
+}
+
+main {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 50px;
+  gap: 20px;
+}
+
+.contact-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+}
+
+.name-title-container img {
+  width: 60%;
+  border-radius: 50%;
+
+  padding: 1rem;
+}
+
+.name-title-container p {
+  font-family: monospace;
+  position: relative;
+  z-index: 2;
+}
+
+.background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 70%;
+  background-size: cover;
+  background-position: center top;
+  z-index: -1;
+}
+
+.name-title-container {
+  margin-top: -10px;
+  font-size: 0.8rem;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(150, 150, 150, 0.7);
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.pending-wrapper {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+}
+
+.pending-container {
+  text-align: center;
+  padding: 30px;
+}
+
+.connect-btn {
+  font-family: monospace;
+  font-size: 1rem;
+  font-weight: lighter;
+  border-radius: 10%;
+  border: none;
+  background-color: aquamarine;
+  color: gray;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background-color: aqua;
+}

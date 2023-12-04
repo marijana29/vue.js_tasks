@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <title>LinkedIn-Like App</title>
+</head>
+
+<body>
+    <div id="app">
+        <main class="main">
+            <div v-for="contact in linkedinUser" :key="contact.id" class="contact-card">
+                <button @click="removeContact(contact)" class="close-button">&#10006;</button>
+                <div class="background-container"
+                    :style="{ 'background-image': 'url(' + contact.backgroundImage + ')' }"></div>
+                <div class="name-title-container">
+                    <img :src="contact.picture" alt="Profile Picture"
+                        style="width: 60%; border-radius: 50%; padding: 1rem;">
+                    <p>{{ contact.name.title }}</p>
+                    <p :style="{ 'font-weight': 'bold' }">{{ contact.name.first }} {{ contact.name.last }}</p>
+                    <p style="font-style: italic;">{{ contact.title }}</p>
+                </div>
+                <p>Mutual Connections: {{ contact.mutualConnections }}</p>
+                <button @click="toggleConnectionStatus(contact)" class="connect-btn">
+                    {{ contact.connectionStatus
+                    }}
+                </button>
+            </div>
+        </main>
+        <div class="pending-wrapper">
+            <div class="pending-container">Pending Requests: {{ pendingRequests }}</div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
