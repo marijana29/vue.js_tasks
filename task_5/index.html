@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Counter</title>
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <div>
+                <h1 class="main-heading">Counter</h1>
+                <small>(click the white area or hit space / enter to count)</small>
+            </div>
+            <button class="button" @click="resetCounter">Reset</button>
+        </header>
+        <main @click="updateCounter" :style="{ backgroundSize: backgroundSize }">
+            <label id="counter">{{ count }}</label>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
