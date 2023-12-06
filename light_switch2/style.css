@@ -1,0 +1,48 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.setting {
+  transition: 1s ease-in-out background-color;
+  background-color: #87ceeb;
+}
+
+.setting--dark {
+  background-color: #3d3d3d;
+}
+
+.toggle-button {
+  font-size: 2rem;
+  cursor: pointer;
+  font-family: "Quattrocento", serif;
+  border: 5px solid #3d3d3d;
+  padding: 0.5rem 1rem;
+  background-color: #ffe600;
+  border-radius: 2px;
+  color: #3d3d3d;
+}
+
+.toggle-button--dark {
+  border: 5px solid #cfe5d5;
+  background-color: #3d3d3d;
+  color: #cfe5d5;
+  box-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700, 0 0 20px #ffd700;
+}
