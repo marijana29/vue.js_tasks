@@ -1,0 +1,30 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Color mixer</title>
+</head>
+
+<body :style="{ backgroundColor: displayColor }">
+    <div id="app">
+        <header>
+            <div>
+                <label for="red">Red</label>
+                <input type="range" v-model="redValue" class="red" min="0" max="255" value="65" />
+                <label for="green">Green</label>
+                <input type="range" v-model="greenValue" class="green" min="0" max="255" value="105" />
+                <label for="blue">Blue</label>
+                <input type="range" v-model="blueValue" class="blue" min="0" max="255" value="225" />
+            </div>
+            <p id="color-value">{{ displayColor }}</p>
+        </header>
+        <main></main>
+        <button @click="fetchColor">Get Random Color</button>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

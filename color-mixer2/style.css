@@ -1,0 +1,46 @@
+html,
+body {
+  font-family: monospace;
+  font-size: 24px;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  padding: 1rem;
+  background-color: gray;
+}
+
+input {
+  padding-right: 10px;
+}
+
+input[class="red"]::-webkit-slider-thumb {
+  background-color: #f55050;
+}
+input[class="green"]::-webkit-slider-thumb {
+  background-color: green;
+}
+input[class="blue"]::-webkit-slider-thumb {
+  background-color: blue;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #72a2d1;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #517ca5;
+}
